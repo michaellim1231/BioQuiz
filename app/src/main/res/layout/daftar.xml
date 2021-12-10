@@ -42,6 +42,7 @@
 
     <EditText
 
+        android:id="@+id/editText2"
         android:layout_width="331dp"
         android:layout_height="51dp"
         android:background="@drawable/edit_text_custom"
@@ -126,15 +127,16 @@
         android:id="@+id/button"
         android:layout_width="352dp"
         android:layout_height="59dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/custom_button_purple"
         android:text="Daftar"
-        android:textColor="#772CE7"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="588dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

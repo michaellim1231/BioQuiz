@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/halamanlevel">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -50,68 +51,41 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/materiicon"
-        app:cardBackgroundColor="#00FFFFFF"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/materiicon">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Materi"
-        android:textColor="#FDC70A"
-        android:textSize="34sp"
+        android:text="AYO BELAJAR"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Quiz"
-        android:textColor="#FDC70A"
-        android:textSize="34sp"
+        android:text="Pilih BAB yang ingin dipelajari"
+        android:textColor="#C5C5C5"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/quizicon"
-        app:cardBackgroundColor="#00FFFFFF"
-        app:cardCornerRadius="30dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="412dp"
+        android:layout_height="572dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/quizicon">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        tools:layout_editor_absoluteY="158dp"
+        tools:listitem="@layout/bab_card_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

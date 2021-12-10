@@ -60,7 +60,7 @@
         android:layout_height="59dp"
         android:background="@drawable/custom_button_purple"
         android:text="Masuk"
-        android:textColor="#772CE7"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

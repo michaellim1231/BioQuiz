@@ -13,7 +13,7 @@
         android:layout_marginTop="588dp"
         android:background="@drawable/custom_button"
         android:text="daftar"
-        android:textColor="#673AB7"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
