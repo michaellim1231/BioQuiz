@@ -1,9 +1,11 @@
 package com.example.bioquiz.retrofit;
 
-import com.example.bioquiz.Const;
+import com.example.bioquiz.helper.Const;
+import com.example.bioquiz.Model.Question;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -46,5 +48,9 @@ public class RetrofitService {
             service = new RetrofitService(token);
         }
         return service;
+    }
+
+    public Call<Question> getQuestions(){
+        return api.getQuestions();
     }
 }

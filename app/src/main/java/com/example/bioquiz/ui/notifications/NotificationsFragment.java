@@ -16,7 +16,7 @@ import com.example.bioquiz.databinding.FragmentNotificationsBinding;
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
-private FragmentNotificationsBinding binding;
+    private FragmentNotificationsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {

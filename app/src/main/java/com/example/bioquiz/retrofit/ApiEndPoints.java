@@ -1,5 +1,6 @@
 package com.example.bioquiz.retrofit;
 
+import com.example.bioquiz.Model.Question;
 import com.example.bioquiz.Model.RegisterResponse;
 import com.example.bioquiz.Model.TokenResponse;
 import com.google.gson.JsonObject;
@@ -7,6 +8,7 @@ import com.google.gson.JsonObject;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiEndPoints {
@@ -23,4 +25,7 @@ public interface ApiEndPoints {
 
     @POST("logout")
     Call<JsonObject> logout();
+
+    @GET("questions")
+    Call<Question> getQuestions();
 }
