@@ -9,6 +9,7 @@
 
     <EditText
 
+        android:id="@+id/editText_username"
         android:layout_width="331dp"
         android:layout_height="51dp"
         android:background="@drawable/edit_text_custom"
@@ -25,6 +26,7 @@
 
     <EditText
 
+        android:id="@+id/editText_email"
         android:layout_width="331dp"
         android:layout_height="51dp"
         android:background="@drawable/edit_text_custom"
@@ -42,7 +44,7 @@
 
     <EditText
 
-        android:id="@+id/editText2"
+        android:id="@+id/editText_password"
         android:layout_width="331dp"
         android:layout_height="51dp"
         android:background="@drawable/edit_text_custom"
@@ -60,7 +62,7 @@
 
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/editText_city"
         android:layout_width="160dp"
         android:layout_height="47dp"
         android:layout_marginBottom="16dp"
@@ -69,16 +71,16 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/editText_birthyear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.215"
-        app:layout_constraintStart_toEndOf="@+id/editText3"
+        app:layout_constraintStart_toEndOf="@+id/editText_name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.995"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/editText_school"
         android:layout_width="160dp"
         android:layout_height="47dp"
         android:background="@drawable/edit_text_custom"
@@ -86,13 +88,13 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/editText_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_name"
         app:layout_constraintWidth_percent=".8"
         tools:layout_editor_absoluteY="276dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText_name"
         android:layout_width="160dp"
         android:layout_height="47dp"
         android:layout_marginStart="40dp"
@@ -103,13 +105,13 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintBottom_toTopOf="@+id/editText_school"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editText_birthyear"
         android:layout_width="160dp"
         android:layout_height="47dp"
         android:background="@drawable/edit_text_custom"
@@ -117,13 +119,13 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/editText6"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
+        app:layout_constraintEnd_toEndOf="@+id/editText_city"
+        app:layout_constraintStart_toStartOf="@+id/editText_city"
         app:layout_constraintWidth_percent=".8"
         tools:layout_editor_absoluteY="276dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login_btn"
         android:layout_width="352dp"
         android:layout_height="59dp"
         android:layout_marginTop="72dp"
@@ -135,7 +137,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
