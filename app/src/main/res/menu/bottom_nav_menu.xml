@@ -3,14 +3,17 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/home" />
+        android:icon="@drawable/home"
+        android:title="Home" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/score" />
+        android:icon="@drawable/score"
+        android:title="Dashoard" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/person" />
+        android:icon="@drawable/person"
+        android:title="Notifications" />
 
 </menu>

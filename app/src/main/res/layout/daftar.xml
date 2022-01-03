@@ -64,39 +64,39 @@
     <EditText
         android:id="@+id/editText_city"
         android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="208dp"
         android:background="@drawable/edit_text_custom"
         android:hint="City"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText_birthyear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toEndOf="@+id/editText_name"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
         android:id="@+id/editText_school"
         android:layout_width="160dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/edit_text_custom"
         android:hint="School"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_username"
         app:layout_constraintEnd_toEndOf="@+id/editText_name"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editText_name"
-        app:layout_constraintWidth_percent=".8"
-        tools:layout_editor_absoluteY="276dp" />
+        app:layout_constraintWidth_percent=".8" />
 
     <EditText
         android:id="@+id/editText_name"
         android:layout_width="160dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="212dp"
         android:layout_marginBottom="17dp"
@@ -113,7 +113,8 @@
     <EditText
         android:id="@+id/editText_birthyear"
         android:layout_width="160dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_custom"
         android:hint="Birthyear"
         android:paddingLeft="20dp"
@@ -121,8 +122,8 @@
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="@+id/editText_city"
         app:layout_constraintStart_toStartOf="@+id/editText_city"
-        app:layout_constraintWidth_percent=".8"
-        tools:layout_editor_absoluteY="276dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_city"
+        app:layout_constraintWidth_percent=".8" />
 
     <Button
         android:id="@+id/login_btn"

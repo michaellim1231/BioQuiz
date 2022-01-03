@@ -6,15 +6,22 @@ import android.os.Parcelable;
 public class RegisterResponse implements Parcelable {
 
     private String name;
+    private String city;
+    private String school;
+    private String birthyear;
     private String email;
+    private String username;
     private String password;
-    private String password_confirmation;
+
 
     protected RegisterResponse(Parcel in) {
         name = in.readString();
+        city = in.readString();
+        school = in.readString();
+        birthyear = in.readString();
+        username = in.readString();
         email = in.readString();
         password = in.readString();
-        password_confirmation = in.readString();
     }
 
     public static final Creator<RegisterResponse> CREATOR = new Creator<RegisterResponse>() {
@@ -37,6 +44,38 @@ public class RegisterResponse implements Parcelable {
         this.name = name;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getBirthyear() {
+        return birthyear;
+    }
+
+    public void setBirthyear(String birthyear) {
+        this.birthyear = birthyear;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -53,14 +92,6 @@ public class RegisterResponse implements Parcelable {
         this.password = password;
     }
 
-    public String getPassword_confirmation() {
-        return password_confirmation;
-    }
-
-    public void setPassword_confirmation(String password_confirmation) {
-        this.password_confirmation = password_confirmation;
-    }
-
     @Override
     public int describeContents() {
         return 0;
@@ -69,8 +100,11 @@ public class RegisterResponse implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
+        dest.writeString(city);
+        dest.writeString(school);
+        dest.writeString(birthyear);
+        dest.writeString(username);
         dest.writeString(email);
         dest.writeString(password);
-        dest.writeString(password_confirmation);
     }
 }
