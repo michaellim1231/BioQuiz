@@ -51,20 +51,26 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14221014492753623" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.165" />
         <entry key="app/src/main/res/layout/bab_card_view.xml" value="0.14221014492753623" />
-        <entry key="app/src/main/res/layout/daftar.xml" value="0.1480978260869565" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.11676798378926039" />
+        <entry key="app/src/main/res/layout/daftar.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dashboard_admin_card_view.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/dashboard_card_view.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_admin.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.11676798378926039" />
         <entry key="app/src/main/res/layout/fragment_notfications.xml" value="0.11676798378926039" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_score.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.16576086956521738" />
         <entry key="app/src/main/res/layout/halaman_bab.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/halaman_score_kalah.xml" value="0.14221014492753623" />
+        <entry key="app/src/main/res/layout/halaman_materi.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/halaman_score_kalah.xml" value="0.165" />
         <entry key="app/src/main/res/layout/halaman_score_menang.xml" value="0.1480978260869565" />
+        <entry key="app/src/main/res/layout/halaman_soal.xml" value="0.165" />
         <entry key="app/src/main/res/layout/home.xml" value="0.11803444782168186" />
         <entry key="app/src/main/res/layout/login.xml" value="0.14221014492753623" />
         <entry key="app/src/main/res/layout/scorelist.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/scorelist_card_view.xml" value="0.14492753623188406" />
         <entry key="app/src/main/res/layout/signup.xml" value="0.125" />
         <entry key="app/src/main/res/layout/soal.xml" value="0.17753623188405798" />
         <entry key="app/src/main/res/layout/splash_screen.xml" value="0.11676798378926039" />
@@ -78,5 +84,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.165" />
+      </ProjectState>
+    </option>
   </component>
 </project>

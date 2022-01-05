@@ -93,12 +93,13 @@
 
             <TextView
                 android:id="@+id/email_textView"
-                android:layout_width="322dp"
-                android:layout_height="27dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:text="Email"
                 android:textColor="#F4F3F3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.538"
                 app:layout_constraintStart_toEndOf="@+id/imageView6"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,14 +135,16 @@
 
             <TextView
                 android:id="@+id/Username_textView"
-                android:layout_width="321dp"
-                android:layout_height="35dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:text="Username"
                 android:textColor="#FAF7F7"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.157"
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.454" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

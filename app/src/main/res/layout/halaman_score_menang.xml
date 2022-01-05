@@ -72,12 +72,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
-    <Button
-        android:id="@+id/button3"
+    <android.widget.Button
+        android:id="@+id/btn_backHome"
         android:layout_width="339dp"
         android:layout_height="64dp"
         android:background="@drawable/cardview_custom"
         android:text="Back to Home"
+        android:textColor="#8E05BF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

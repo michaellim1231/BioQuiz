@@ -4,14 +4,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.bioquiz.Model.Question;
 import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
-import com.example.bioquiz.repositories.QuestionRepository;
 
 public class SoalFragment extends AppCompatActivity{
 
@@ -22,7 +18,7 @@ public class SoalFragment extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.soal);
+        setContentView(R.layout.halaman_soal);
 
         textviewSoal = findViewById(R.id.textviewSoal);
 
