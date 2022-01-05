@@ -1,4 +1,4 @@
-package com.example.bioquiz;
+package com.example.bioquiz.view;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
+import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
 
 /**
@@ -91,18 +92,18 @@ public class SplashFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        ((LoginActivity) getActivity()).getSupportActionBar().hide();
+        ((LoginFragment) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((LoginActivity) getActivity()).getSupportActionBar().hide();
+        ((LoginFragment) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        ((LoginActivity)getActivity()).getSupportActionBar().show();
+        ((LoginFragment)getActivity()).getSupportActionBar().show();
     }
 }

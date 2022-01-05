@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".view.FirstLayoutFragment">
 
     <TextView
         android:id="@+id/textView"
@@ -15,12 +16,12 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/textView_masuk"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_masuk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
@@ -33,12 +34,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_register"
         android:layout_width="352dp"
         android:layout_height="59dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/custom_button_purple"
-        android:text="Masuk"
+        android:text="REGISTER"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
