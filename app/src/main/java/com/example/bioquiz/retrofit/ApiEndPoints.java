@@ -14,7 +14,7 @@ import retrofit2.http.POST;
 public interface ApiEndPoints {
     @POST("login")
     @FormUrlEncoded
-    Call<TokenResponse> login( @Field("name") String name,  @Field("city") String city, @Field("school") String school,  @Field("birthyear") String birthyear,  @Field("username") String username, @Field("email") String email, @Field("password") String password);
+    Call<TokenResponse> login(@Field("name") String name, @Field("city") String city);
 
     @POST("register")
     @FormUrlEncoded

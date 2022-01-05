@@ -1,5 +1,7 @@
 package com.example.bioquiz.retrofit;
 
+import com.example.bioquiz.Model.RegisterResponse;
+import com.example.bioquiz.Model.TokenResponse;
 import com.example.bioquiz.helper.Const;
 import com.example.bioquiz.Model.Question;
 
@@ -48,6 +50,16 @@ public class RetrofitService {
             service = new RetrofitService(token);
         }
         return service;
+    }
+
+
+    public Call<TokenResponse> login(String email, String password){
+        return api.login(email, password);
+    }
+
+
+    public Call<RegisterResponse> register(String name, String city, String birthyear, String school, String email, String username, String password, String password_confirmation){
+        return api.register(name, city, birthyear, school, email, username, password, password_confirmation);
     }
 
     public Call<Question> getQuestions(){
