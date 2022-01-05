@@ -12,8 +12,8 @@
         android:title="Dashoard" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_profile"
         android:icon="@drawable/person"
-        android:title="Notifications" />
+        android:title="Profile" />
 
 </menu>
