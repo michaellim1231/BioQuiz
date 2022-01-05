@@ -4,10 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bioquiz.R;
+import com.example.bioquiz.helper.SharedPreferenceHelper;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +21,12 @@ import com.example.bioquiz.R;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+
+    Button btn_logout, btn_edit_profile;
+
+    private ProfileViewModel profileViewModel;
+    private SharedPreferenceHelper helper;
+    private static final String TAG = "ProfileFragment";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,5 +73,32 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        helper = SharedPreferenceHelper.getInstance(requireActivity());
+        profileViewModel = new ViewModelProvider(getActivity()).get(ProfileViewModel.class);
+        profileViewModel.init(helper.getAccessToken());
+
+        btn_logout = view.findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(view1 -> {
+            profileViewModel.logout().observe(requireActivity(), s ->{
+                if (!s.isEmpty()){
+                    helper.clearPref();
+                   // NavDirections actions = ProfileFragmentDirections.actionProfileFragment2ToLoginFragment();
+                   // Navigation.findNavController(view1).navigate(actions);
+                    Toast.makeText(requireActivity(), s, Toast.LENGTH_SHORT).show();
+                }
+            });
+        });
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        getActivity().getViewModelStore().clear();
     }
 }

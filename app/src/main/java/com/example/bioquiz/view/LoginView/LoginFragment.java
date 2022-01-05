@@ -12,12 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavDirections;
-import androidx.navigation.Navigation;
 
 import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
-import com.example.bioquiz.view.FirstLayoutFragment;
 import com.example.bioquiz.view.Main.MainActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -94,8 +91,8 @@ public class LoginFragment extends Fragment {
         reg_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavDirections action = LoginFragmentDirection.actionLoginFragmentToRegisterFragment();
-                Navigation.findNavController(view).navigate(action);
+//              NavDirections action = LoginFragmentDirection.actionLoginFragmentToRegisterFragment();
+//              Navigation.findNavController(view).navigate(action);
 //              getActivity().finish();
             }
         });
@@ -110,8 +107,8 @@ public class LoginFragment extends Fragment {
                 LoginViewModel.login(email, pass).observe(requireActivity(), tokenResponse -> {
                     if (tokenResponse != null){
                         helper.saveAccessToken(tokenResponse.getAuthorization());
-                        NavDirections actions = LoginFragmentDirections.actionLoginFragmentToProjectFragment2();
-                        Navigation.findNavController(view1).navigate(actions);
+                     //  NavDirections actions = LoginFragmentDirections.actionLoginFragmentToProjectFragment2();
+                     //  Navigation.findNavController(view1).navigate(actions);
                         Toast.makeText(requireActivity(), "Login Succes", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(requireActivity(), "Login Failed", Toast.LENGTH_SHORT).show();

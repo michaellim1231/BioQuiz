@@ -4,6 +4,7 @@ import com.example.bioquiz.Model.RegisterResponse;
 import com.example.bioquiz.Model.TokenResponse;
 import com.example.bioquiz.helper.Const;
 import com.example.bioquiz.Model.Question;
+import com.google.gson.JsonObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -58,11 +59,15 @@ public class RetrofitService {
     }
 
 
-    public Call<RegisterResponse> register(String name, String city, String birthyear, String school, String email, String username, String password, String password_confirmation){
-        return api.register(name, city, birthyear, school, email, username, password, password_confirmation);
+    public Call<RegisterResponse> register(String name, String city, String birthyear, String school, String email, String username, String password){
+        return api.register(name, city, birthyear, school, email, username, password);
     }
 
     public Call<Question> getQuestions(){
         return api.getQuestions();
+    }
+
+    public Call<JsonObject> logout(){
+        return api.logout();
     }
 }
