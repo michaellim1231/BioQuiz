@@ -1,4 +1,4 @@
-package com.example.bioquiz.view.SoalView;
+package com.example.bioquiz.view.QuizView;
 
 import android.app.Application;
 import android.util.Log;

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/halamanlevel">
+    android:background="@drawable/halamanlevel"
+    tools:context=".view.BabView.BabFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_user"

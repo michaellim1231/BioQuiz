@@ -18,6 +18,7 @@ import androidx.navigation.Navigation;
 import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
 import com.example.bioquiz.view.FirstLayoutFragment;
+import com.example.bioquiz.view.Main.MainActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 /**
@@ -93,9 +94,9 @@ public class LoginFragment extends Fragment {
         reg_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavDirections action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment();
+                NavDirections action = LoginFragmentDirection.actionLoginFragmentToRegisterFragment();
                 Navigation.findNavController(view).navigate(action);
-//                getActivity().finish();
+//              getActivity().finish();
             }
         });
 
@@ -125,18 +126,18 @@ public class LoginFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        ((FirstLayoutFragment) getActivity()).getSupportActionBar().hide();
+        ((MainActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((FirstLayoutFragment) getActivity()).getSupportActionBar().hide();
+        ((MainActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        ((FirstLayoutFragment)getActivity()).getSupportActionBar().show();
+        ((MainActivity)getActivity()).getSupportActionBar().show();
     }
 }

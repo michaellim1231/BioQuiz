@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.bioquiz.ui.Profile.NotificationsFragment"
+        android:name="com.example.bioquiz.ui.Profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
@@ -25,20 +25,52 @@
         android:id="@+id/splashFragment"
         android:name="com.example.bioquiz.view.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_FirstLayoutFragment"
+            app:destination="@id/FirstLayoutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.bioquiz.LoginFragment2"
-        android:label="fragment_login2"
-        tools:layout="@layout/fragment_login" />
+        android:name="com.example.bioquiz.view.LoginView.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.bioquiz.view.RegisterView.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_FirstLayoutFragment"
+            app:destination="@id/FirstLayoutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/FirstLayoutFragment"
         android:name="com.example.bioquiz.view.FirstLayoutFragment"
         android:label="fragment_main_activity"
-        tools:layout="@layout/fragment_first_layout" />
+        tools:layout="@layout/fragment_first_layout" >
+        <action
+            android:id="@+id/action_FirstLayoutFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_FirstLayoutFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/babFragment"
+        android:name="com.example.bioquiz.view.BabView.BabFragment"
+        android:label="fragment_bab"
+        tools:layout="@layout/fragment_bab" />
+    <fragment
+        android:id="@+id/stageFragment"
+        android:name="com.example.bioquiz.view.StageView.StageFragment"
+        android:label="fragment_stage"
+        tools:layout="@layout/fragment_stage" />
 </navigation>
