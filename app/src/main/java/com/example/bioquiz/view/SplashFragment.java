@@ -11,10 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavDirections;
-import androidx.navigation.Navigation;
 
 import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
+import com.example.bioquiz.view.Main.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -79,12 +79,12 @@ public class SplashFragment extends Fragment {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             NavDirections action;
             if (helper.getAccessToken().isEmpty()){
-                action = SplashFragmentDirections.actionSplashFragmentToLoginFragment();
+//                action = SplashFragmentDirections.actionSplashFragmentToLoginFragment();
 //                action = SplashFragmentDirections.actionSplashFragmentToProjectFragment2();
             }else{
-                action = SplashFragmentDirections.actionSplashFragmentToProjectFragment2();
+//                action = SplashFragmentDirections.actionSplashFragmentToProjectFragment2();
             }
-            Navigation.findNavController(view).navigate(action);
+//            Navigation.findNavController(view).navigate(action);
         }, splashtime);
 
     }
@@ -92,18 +92,18 @@ public class SplashFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        ((LoginFragment) getActivity()).getSupportActionBar().hide();
+        ((MainActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((LoginFragment) getActivity()).getSupportActionBar().hide();
+        ((MainActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        ((LoginFragment)getActivity()).getSupportActionBar().show();
+        ((MainActivity)getActivity()).getSupportActionBar().show();
     }
 }
