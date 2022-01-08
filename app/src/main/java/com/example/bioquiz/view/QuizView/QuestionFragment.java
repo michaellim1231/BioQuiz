@@ -4,17 +4,27 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bioquiz.R;
+import com.example.bioquiz.helper.SharedPreferenceHelper;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link QuestionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QuestionFragment extends Fragment {
+public class QuestionFragment<helper> extends Fragment {
+    TextView textViewSoal;
+
+    private QuestionViewModel questionViewModel;
+    private SharedPreferenceHelper helper;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,5 +71,19 @@ public class QuestionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_question, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        textViewSoal = view.findViewById(R.id.textviewSoal);
+
+        helper = SharedPreferenceHelper.getInstance(requireActivity());;
+        questionViewModel = new ViewModelProvider(QuestionFragment.this).get(QuestionViewModel.class);
+        questionViewModel.init(helper.getAccessToken());
+        questionViewModel.getQuestions();
+        questionViewModel.getResultQuestions().observe(QuestionFragment.this, question -> {
+            String soal = question.getSoal().get(0).getSoal_text();
+            textViewSoal.setText(soal);
+        });
     }
 }
