@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/halamanlevel"
-    tools:context=".view.StageView.StageFragment">
+    tools:context=".view.StageView.StageFragment2">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_user"
@@ -100,6 +100,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22"
         app:layout_constraintVertical_bias="1.0"
-        tools:listitem="@layout/stage_card_view" />
+        tools:listitem="@layout/bab_card_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

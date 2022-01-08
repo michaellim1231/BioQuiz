@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/halamansoal">
+    android:background="@drawable/halamansoal"
+    tools:context=".view.BabView.MateriFragment">
 
     <TextView
         android:id="@+id/textView_bab"
