@@ -1,6 +1,9 @@
 package com.example.bioquiz.retrofit;
 
+import com.example.bioquiz.Model.Bab;
+import com.example.bioquiz.Model.Material;
 import com.example.bioquiz.Model.RegisterResponse;
+import com.example.bioquiz.Model.Stage;
 import com.example.bioquiz.Model.TokenResponse;
 import com.example.bioquiz.helper.Const;
 import com.example.bioquiz.Model.Question;
@@ -65,6 +68,19 @@ public class RetrofitService {
 
     public Call<Question> getQuestions(){
         return api.getQuestions();
+    }
+
+
+    public Call<Stage> getStage(){
+        return api.getStage();
+    }
+
+    public Call<Bab> getBab(){
+        return api.getBab();
+    }
+
+    public Call<Material> getMateri(){
+        return api.getMateri();
     }
 
     public Call<JsonObject> logout(){

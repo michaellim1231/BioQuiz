@@ -1,7 +1,10 @@
 package com.example.bioquiz.retrofit;
 
+import com.example.bioquiz.Model.Bab;
+import com.example.bioquiz.Model.Material;
 import com.example.bioquiz.Model.Question;
 import com.example.bioquiz.Model.RegisterResponse;
+import com.example.bioquiz.Model.Stage;
 import com.example.bioquiz.Model.TokenResponse;
 import com.google.gson.JsonObject;
 
@@ -27,4 +30,13 @@ public interface ApiEndPoints {
 
     @GET("questions")
     Call<Question> getQuestions();
+
+    @GET("stage")
+    Call<Stage> getStage();
+
+    @GET("bab")
+    Call<Bab> getBab();
+
+    @GET("materi")
+    Call<Material> getMateri();
 }

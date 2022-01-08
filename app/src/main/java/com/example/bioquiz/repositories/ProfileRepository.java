@@ -17,6 +17,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ProfileRepository {
+
     private static ProfileRepository profileRepository;
     private RetrofitService apiService;
     private static final String TAG = "ProfileRepository";

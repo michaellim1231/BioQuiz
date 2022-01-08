@@ -1,12 +1,30 @@
 package com.example.bioquiz.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.Gson;
 
 import java.util.List;
 
-public class Question {
+public class Question implements Parcelable {
 
     private List<Soal> soal;
+
+    protected Question(Parcel in) {
+    }
+
+    public static final Creator<Question> CREATOR = new Creator<Question>() {
+        @Override
+        public Question createFromParcel(Parcel in) {
+            return new Question(in);
+        }
+
+        @Override
+        public Question[] newArray(int size) {
+            return new Question[size];
+        }
+    };
 
     public static Question objectFromData(String str) {
 
@@ -19,6 +37,15 @@ public class Question {
 
     public void setSoal(List<Soal> soal) {
         this.soal = soal;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
     }
 
     public static class Soal {
