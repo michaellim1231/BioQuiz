@@ -79,10 +79,9 @@ public class SplashFragment extends Fragment {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             NavDirections action;
             if (helper.getAccessToken().isEmpty()){
-//                action = SplashFragmentDirections.actionSplashFragmentToLoginFragment();
-//                action = SplashFragmentDirections.actionSplashFragmentToProjectFragment2();
+//                action = SplashFragmentDirections.actionSplashFragmentToFirstLayoutFragment();
             }else{
-//                action = SplashFragmentDirections.actionSplashFragmentToProjectFragment2();
+//                action = SplashFragmentDirections.actionSplashFragmentToHomeFragment();
             }
 //            Navigation.findNavController(view).navigate(action);
         }, splashtime);

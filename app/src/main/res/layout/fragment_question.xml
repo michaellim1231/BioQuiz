@@ -6,20 +6,20 @@ android:layout_height="match_parent"
 android:background="@drawable/halamansoal"
     tools:context=".view.QuizView.QuestionFragment">
 
-<TextView
-    android:id="@+id/textviewSoal"
-    android:layout_width="378dp"
-    android:layout_height="243dp"
-    android:layout_marginTop="88dp"
-    android:text="TextView"
-    android:textColor="#FFFFFF"
-    android:textSize="16sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.484"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textviewSoal"
+        android:layout_width="378dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="88dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<RadioGroup
+    <RadioGroup
     android:id="@+id/radioGroup"
     android:layout_width="402dp"
     android:layout_height="309dp"

@@ -1,13 +1,25 @@
-package com.example.bioquiz.view.BabView;
+package com.example.bioquiz.view.MateriView;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.bioquiz.Model.Material;
 import com.example.bioquiz.R;
+import com.example.bioquiz.helper.SharedPreferenceHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +27,10 @@ import com.example.bioquiz.R;
  * create an instance of this fragment.
  */
 public class MateriFragment extends Fragment {
+    TextView textViewBab, textViewMateri;
+    Button btn_back;
+    private MateriViewModel materiViewModel;
+    private SharedPreferenceHelper helper;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,5 +77,30 @@ public class MateriFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_materi, container, false);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        textViewBab = view.findViewById(R.id.textView_bab);
+        textViewMateri = view.findViewById(R.id.textView_materi);
+        helper = SharedPreferenceHelper.getInstance(requireActivity());;
+        materiViewModel = new ViewModelProvider(getActivity()).get(MateriViewModel.class);
+        materiViewModel.init(helper.getAccessToken());
+        materiViewModel.getQuestions();
+        materiViewModel.getResultQuestions().observe(getActivity(), showMateri);
+
+    }
+    List<Material> results = new ArrayList<>();
+    LinearLayoutManager linearLayoutManager;
+
+    private Observer<Material> showMateri= new Observer<Material>() {
+        @Override
+        public void onChanged(Material material) {
+
+        }
+    };
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }

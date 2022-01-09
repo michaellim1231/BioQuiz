@@ -9,10 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.bioquiz.Model.Question;
 import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,18 +78,32 @@ public class QuestionFragment<helper> extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_question, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         textViewSoal = view.findViewById(R.id.textviewSoal);
 
         helper = SharedPreferenceHelper.getInstance(requireActivity());;
-        questionViewModel = new ViewModelProvider(QuestionFragment.this).get(QuestionViewModel.class);
+        questionViewModel = new ViewModelProvider(getActivity()).get(QuestionViewModel.class);
         questionViewModel.init(helper.getAccessToken());
         questionViewModel.getQuestions();
-        questionViewModel.getResultQuestions().observe(QuestionFragment.this, question -> {
+        questionViewModel.getResultQuestions().observe(getActivity(), showQuestion);
+
+    }
+    List<Question.Soal> results = new ArrayList<>();
+    LinearLayoutManager linearLayoutManager;
+
+    private Observer<Question> showQuestion = new Observer<Question>() {
+        @Override
+        public void onChanged(Question question) {
+            results = question.getSoal();
             String soal = question.getSoal().get(0).getSoal_text();
             textViewSoal.setText(soal);
-        });
+        }
+    };
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }
+

@@ -113,7 +113,7 @@
         tools:layout="@layout/fragment_dashboard_admin" />
     <fragment
         android:id="@+id/materiFragment"
-        android:name="com.example.bioquiz.view.BabView.MateriFragment"
+        android:name="com.example.bioquiz.view.MateriView.MateriFragment"
         android:label="fragment_materi"
         tools:layout="@layout/fragment_materi" >
         <action
