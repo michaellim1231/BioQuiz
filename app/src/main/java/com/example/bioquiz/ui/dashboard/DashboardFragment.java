@@ -1,16 +1,16 @@
 package com.example.bioquiz.ui.dashboard;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.bioquiz.R;
+import com.example.bioquiz.helper.SharedPreferenceHelper;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +18,9 @@ import com.example.bioquiz.R;
  * create an instance of this fragment.
  */
 public class DashboardFragment extends Fragment {
+    private DashboardViewModel dashboardViewModel;
+    private SharedPreferenceHelper helper;
+    private static final String TAG = "DashboardFragment";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
