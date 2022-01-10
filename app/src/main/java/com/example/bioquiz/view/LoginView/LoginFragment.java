@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bioquiz.R;
 import com.example.bioquiz.helper.SharedPreferenceHelper;
-import com.example.bioquiz.view.Main.MainActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 /**
@@ -120,21 +119,21 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        ((MainActivity) getActivity()).getSupportActionBar().hide();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        ((MainActivity) getActivity()).getSupportActionBar().hide();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        ((MainActivity)getActivity()).getSupportActionBar().show();
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        ((MainActivity) getActivity()).getSupportActionBar().hide();
+//    }
+//
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        ((MainActivity) getActivity()).getSupportActionBar().hide();
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        ((MainActivity)getActivity()).getSupportActionBar().show();
+//    }
 }

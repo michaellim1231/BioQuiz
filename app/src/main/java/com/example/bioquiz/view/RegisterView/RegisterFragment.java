@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bioquiz.R;
-import com.example.bioquiz.view.Main.MainActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 /**
@@ -133,21 +132,21 @@ public class RegisterFragment extends Fragment {
         });
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        ((MainActivity) getActivity()).getSupportActionBar().hide();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        ((MainActivity) getActivity()).getSupportActionBar().hide();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        ((MainActivity)getActivity()).getSupportActionBar().hide();
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        ((MainActivity) getActivity()).getSupportActionBar().hide();
+//    }
+//
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        ((MainActivity) getActivity()).getSupportActionBar().hide();
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        ((MainActivity)getActivity()).getSupportActionBar().hide();
+//    }
 }
